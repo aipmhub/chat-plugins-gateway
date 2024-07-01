@@ -3,7 +3,7 @@ import {
   PluginRequestPayload,
   getPluginErrorStatus,
   getPluginSettingsFromHeaders,
-} from '@lobehub/chat-plugin-sdk';
+} from '@aipmorg/chat-plugin-sdk';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import Ajv from 'ajv';
 

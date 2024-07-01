@@ -174,7 +174,7 @@ exports[`createGatewayOnEdgeRuntime > Error > should return PluginMarketIndexInv
 exports[`createGatewayOnEdgeRuntime > Error > should return PluginMarketIndexNotFound error when market index is unreachable 1`] = `
 {
   "body": {
-    "indexUrl": "https://chat-plugins.lobehub.com",
+    "indexUrl": "https://chat-plugins.theforage.cn",
     "message": "[gateway] plugin market index not found",
   },
   "errorType": "PluginMarketIndexNotFound",
@@ -295,7 +295,7 @@ exports[`createGatewayOnEdgeRuntime > OpenAPI Auth > should return PluginGateway
   "body": {
     "apiName": "test-api",
     "authorizations": {},
-    "message": "[plugin] there are problem with sending openapi request, please contact with LobeHub Team",
+    "message": "[plugin] there are problem with sending openapi request, please contact with AiPMHub Team",
     "openapi": "https://test-openapi-url.com",
     "parameters": {},
   },

@@ -1,6 +1,5 @@
 // reason to use cfworker json schema:
 // https://github.com/vercel/next.js/discussions/47063#discussioncomment-5303951
-import { Schema } from '@cfworker/json-schema';
 import {
   IPluginErrorType,
   LobeChatPluginApi,
@@ -13,12 +12,13 @@ import {
   pluginManifestSchema,
   pluginMetaSchema,
   pluginRequestPayloadSchema,
-} from '@lobehub/chat-plugin-sdk';
-import { OPENAPI_REQUEST_BODY_KEY } from '@lobehub/chat-plugin-sdk/openapi';
+} from '@aipmorg/chat-plugin-sdk';
+import { OPENAPI_REQUEST_BODY_KEY } from '@aipmorg/chat-plugin-sdk/openapi';
+import { Schema } from '@cfworker/json-schema';
 // @ts-ignore
 import SwaggerClient from 'swagger-client';
 
-export const DEFAULT_PLUGINS_INDEX_URL = 'https://chat-plugins.lobehub.com';
+export const DEFAULT_PLUGINS_INDEX_URL = 'https://chat-plugins.theforage.cn';
 
 type IValidator = (schema: Schema, value: any) => { errors?: any; valid: boolean };
 
@@ -26,7 +26,7 @@ export interface GatewayOptions {
   Validator?: IValidator;
   defaultPluginSettings?: Record<string, Record<string, any>>;
   /**
-   * @default https://chat-plugins.lobehub.com
+   * @default https://chat-plugins.theforage.cn
    */
   pluginsIndexUrl?: string;
 }
@@ -137,8 +137,8 @@ export class Gateway {
       // 一个不规范的插件示例
       // const pluginMeta = {
       //   createAt: '2023-08-12',
-      //   homepage: 'https://github.com/lobehub/chat-plugin-real-time-weather',
-      //   manifest: 'https://registry.npmmirror.com/@lobehub/lobe-chat-plugins/latest/files',
+      //   homepage: 'https://github.com/aipmhub/chat-plugin-real-time-weather',
+      //   manifest: 'https://registry.npmmirror.com/@aipmorg/aipm-chat-plugins/latest/files',
       //   meta: {
       //     avatar: '☂️',
       //     tags: ['weather', 'realtime'],
@@ -151,7 +151,7 @@ export class Gateway {
       if (!pluginMeta)
         return this.createErrorResponse(PluginErrorType.PluginMetaNotFound, {
           identifier,
-          message: `[gateway] plugin '${identifier}' is not found，please check the plugin list in ${marketIndexUrl}, or create an issue to [lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins/issues)`,
+          message: `[gateway] plugin '${identifier}' is not found，please check the plugin list in ${marketIndexUrl}, or create an issue to [aipm-chat-plugins](https://github.com/aipmhub/aipm-chat-plugins/issues)`,
         });
 
       const metaParseResult = pluginMetaSchema.safeParse(pluginMeta);
@@ -343,7 +343,7 @@ export class Gateway {
           authorizations,
           error: (error as Error).message,
           message:
-            '[plugin] there are problem with sending openapi request, please contact with LobeHub Team',
+            '[plugin] there are problem with sending openapi request, please contact with AiPMHub Team',
           openapi: manifest.openapi,
           parameters,
           requestBody,

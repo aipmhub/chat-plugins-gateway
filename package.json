@@ -1,9 +1,9 @@
 {
-  "name": "@lobehub/chat-plugins-gateway",
-  "version": "1.9.0",
-  "description": "Lobe Chat Plugin Market",
-  "repository": "https://github.com/lobehub/chat-plugins-gateway.git",
-  "author": "LobeHub <i@lobehub.com>",
+  "name": "@aipmorg/chat-plugins-gateway",
+  "version": "1.9.1",
+  "description": "AiPM Chat Plugin Market",
+  "repository": "https://github.com/aipmhub/chat-plugins-gateway.git",
+  "author": "AiPMHub <nextprofessionalpower@gmail.com>",
   "sideEffects": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -50,16 +50,16 @@
     "not ie <= 10"
   ],
   "dependencies": {
+    "@aipmorg/chat-plugin-sdk": "^1",
     "@babel/runtime": "^7",
     "@cfworker/json-schema": "^1",
-    "@lobehub/chat-plugin-sdk": "^1",
     "ajv": "^8",
     "swagger-client": "^3",
     "zod": "^3"
   },
   "devDependencies": {
+    "@aipmorg/lint": "latest",
     "@commitlint/cli": "^17",
-    "@lobehub/lint": "latest",
     "@vercel/node": "^2",
     "@vitest/coverage-v8": "0.34.6",
     "commitlint": "^17",

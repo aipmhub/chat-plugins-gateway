@@ -3,7 +3,7 @@ import {
   PluginRequestPayload,
   createErrorResponse,
   getPluginSettingsFromRequest,
-} from '@lobehub/chat-plugin-sdk';
+} from '@aipmorg/chat-plugin-sdk';
 
 import cors, { CorsOptions } from './cors';
 import { Gateway, GatewayErrorResponse, GatewayOptions } from './gateway';

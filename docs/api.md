@@ -1,5 +1,5 @@
 ---
-title: LobeChat Plugins v1.0.0
+title: AiPMChat Plugins v1.0.0
 language_tabs:
   - shell: Shell
   - http: HTTP
@@ -18,13 +18,13 @@ headingLevel: 2
 generator: '@tarslib/widdershins v4.0.17'
 ---
 
-# LobeChat Plugins
+# AiPMChat Plugins
 
 > v1.0.0
 
 Base URLs:
 
-- <a href="https://chat-plugins.lobehub.com"> Prod URL: <https://chat-plugins.lobehub.com></a>
+- <a href="https://chat-plugins.theforage.cn"> Prod URL: <https://chat-plugins.theforage.cn></a>
 
 # Default
 
@@ -32,7 +32,7 @@ Base URLs:
 
 POST /api/v1/runner
 
-与 LobeChat 插件进行通信的接口。本接口描述了如何使用 LobeChat 插件网关 API 来发送请求和获取响应。
+与 AiPMChat 插件进行通信的接口。本接口描述了如何使用 AiPMChat 插件网关 API 来发送请求和获取响应。
 
 > Body 请求参数
 
@@ -108,7 +108,7 @@ POST /api/v1/runner
         }
       },
       "server": {
-        "url": "https://realtime-weather.chat-plugin.lobehub.com/api/v1"
+        "url": "https://realtime-weather.chat-plugin.theforage.cn/api/v1"
       }
     },
     "message": "[plugin] args is invalid with plugin manifest schema"
@@ -132,7 +132,7 @@ POST /api/v1/runner
 ```json
 {
   "body": {
-    "manifestUrl": "https://web-crawler.chat-plugin.lobehub.com/manifest.json",
+    "manifestUrl": "https://web-crawler.chat-plugin.theforage.cn/manifest.json",
     "message": "[plugin] plugin manifest not found"
   },
   "errorType": "pluginManifestNotFound"
@@ -159,7 +159,7 @@ POST /api/v1/runner
     "message": "[plugin] plugin meta is invalid",
     "pluginMeta": {
       "createAt": "2023-08-12",
-      "homepage": "https://github.com/lobehub/chat-plugin-real-time-weather",
+      "homepage": "https://github.com/aipmhub/chat-plugin-real-time-weather",
       "meta": {
         "avatar": "☂️",
         "tags": ["weather", "realtime"]

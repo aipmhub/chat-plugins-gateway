@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     alias: {
       '@': 'src',
-      '@lobehub/chat-plugins-gateway': 'src',
+      '@aipmorg/chat-plugins-gateway': 'src',
     },
     coverage: {
       provider: 'v8',

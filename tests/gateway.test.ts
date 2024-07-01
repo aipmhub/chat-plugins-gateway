@@ -1,5 +1,5 @@
-import { PluginRequestPayload } from '@lobehub/chat-plugin-sdk';
-import { Gateway } from '@lobehub/chat-plugins-gateway';
+import { PluginRequestPayload } from '@aipmorg/chat-plugin-sdk';
+import { Gateway } from '@aipmorg/chat-plugins-gateway';
 import Ajv from 'ajv';
 // @ts-ignore
 import SwaggerClient from 'swagger-client';
@@ -44,7 +44,7 @@ describe('Gateway', () => {
         arguments: '{}',
         identifier: 'mock-credit-card',
         manifest: {
-          $schema: '../node_modules/@lobehub/chat-plugin-sdk/schema.json',
+          $schema: '../node_modules/@aipmorg/chat-plugin-sdk/schema.json',
           api: [
             {
               description: 'It is API to get list of supported vendors',
@@ -103,7 +103,7 @@ describe('Gateway', () => {
         arguments: '{"vendor":"visa"}',
         identifier: 'mock-credit-card',
         manifest: {
-          $schema: '../node_modules/@lobehub/chat-plugin-sdk/schema.json',
+          $schema: '../node_modules/@aipmorg/chat-plugin-sdk/schema.json',
           api: [
             {
               description: 'It is API to generate random credit card numbers',
@@ -111,7 +111,7 @@ describe('Gateway', () => {
               parameters: {
                 properties: {
                   vendor: {
-                    $$ref: 'https://chat-dev.lobehub.com/chat#/components/schemas/Vendor',
+                    $$ref: 'https://chat-dev.theforage.cn/chat#/components/schemas/Vendor',
                     enum: [
                       'visa',
                       'master-card',

@@ -3,9 +3,9 @@ import {
   PluginErrorType,
   PluginRequestPayload,
   createHeadersWithPluginSettings,
-} from '@lobehub/chat-plugin-sdk';
-import { LOBE_PLUGIN_SETTINGS } from '@lobehub/chat-plugin-sdk/lib/request';
-import { createGatewayOnEdgeRuntime } from '@lobehub/chat-plugins-gateway';
+} from '@aipmorg/chat-plugin-sdk';
+import { LOBE_PLUGIN_SETTINGS } from '@aipmorg/chat-plugin-sdk/lib/request';
+import { createGatewayOnEdgeRuntime } from '@aipmorg/chat-plugins-gateway';
 // @ts-ignore
 import SwaggerClient from 'swagger-client';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -209,7 +209,7 @@ describe('createGatewayOnEdgeRuntime', () => {
         body: {
           identifier: 'unknown-plugin',
           message:
-            "[gateway] plugin 'unknown-plugin' is not found，please check the plugin list in https://test-market-index-url.com, or create an issue to [lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins/issues)",
+            "[gateway] plugin 'unknown-plugin' is not found，please check the plugin list in https://test-market-index-url.com, or create an issue to [aipm-chat-plugins](https://github.com/aipmhub/aipm-chat-plugins/issues)",
         },
         errorType: 'PluginMetaNotFound',
       });
@@ -242,7 +242,7 @@ describe('createGatewayOnEdgeRuntime', () => {
                 {
                   author: 'test-plugin',
                   createdAt: '2023-08-12',
-                  homepage: 'https://github.com/lobehub/chat-plugin-real-time-weather',
+                  homepage: 'https://github.com/aipmhub/chat-plugin-real-time-weather',
                   identifier: 'test-plugin',
                   manifest: 'https://test-plugin-url.com/manifest.json',
                   meta: {
@@ -288,7 +288,7 @@ describe('createGatewayOnEdgeRuntime', () => {
                 {
                   author: 'test-plugin',
                   createdAt: '2023-08-12',
-                  homepage: 'https://github.com/lobehub/chat-plugin-real-time-weather',
+                  homepage: 'https://github.com/aipmhub/chat-plugin-real-time-weather',
                   identifier: 'test-plugin',
                   manifest: 'https://test-plugin-url.com/manifest.json',
                   meta: {

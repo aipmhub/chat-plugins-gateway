@@ -6,11 +6,11 @@
 <img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg">
 <img height="120" src="https://registry.npmmirror.com/@lobehub/assets-emoji/1.3.0/files/assets/door.webp">
 
-<h1>LobeChat 插件网关</h1>
+<h1>AiPMChat 插件网关</h1>
 
-LobeChat Plugin Gateway 是一个为 LobeChat 和 LobeHub 提供 Chat 插件网关的后端服务。
+AiPMChat Plugin Gateway 是一个为 AiPMChat 和 AiPMHub 提供 Chat 插件网关的后端服务。
 
-[![][🤯-🧩-lobehub-shield]][🤯-🧩-lobehub-link]
+[![][🤯-🧩-aipmhub-shield]][🤯-🧩-aipmhub-link]
 [![][npm-release-shield]][npm-release-link]
 [![][github-releasedate-shield]][github-releasedate-link]
 [![][github-action-test-shield]][github-action-test-link]
@@ -47,9 +47,9 @@ LobeChat Plugin Gateway 是一个为 LobeChat 和 LobeHub 提供 Chat 插件网�
 
 ## 👋 简介
 
-LobeChat 插件网关是一个后端服务，为 LobeChat 插件提供网关。我们使用 [vercel](https://vercel.com/) 来部署此服务。主要 API `POST /api/v1/runner` 部署为[Edge Function](https://vercel.com/docs/functions/edge-functions)。
+AiPMChat 插件网关是一个后端服务，为 AiPMChat 插件提供网关。我们使用 [vercel](https://vercel.com/) 来部署此服务。主要 API `POST /api/v1/runner` 部署为[Edge Function](https://vercel.com/docs/functions/edge-functions)。
 
-网关服务从 [LobeChat 插件](https://github.com/lobehub/lobe-chat-plugins) 获取 Lobe 插件索引，如果您想将您的插件添加到索引中，请在 LobeChat 插件仓库中[提交 PR](https://github.com/lobehub/lobe-chat-plugins/pulls)。
+网关服务从 [AiPMChat 插件](https://github.com/aipmhub/aipm-chat-plugins) 获取 Lobe 插件索引，如果您想将您的插件添加到索引中，请在 AiPMChat 插件仓库中[提交 PR](https://github.com/aipmhub/aipm-chat-plugins/pulls)。
 
 <div align="right">
 
@@ -61,16 +61,16 @@ LobeChat 插件网关是一个后端服务，为 LobeChat 插件提供网关。�
 
 ### 基本 URL
 
-| 环境   | URL                                            |
-| ------ | ---------------------------------------------- |
-| `PROD` | <https://chat-plugins-gateway.lobehub.com>     |
-| `DEV`  | <https://chat-plugins-gateway-dev.lobehub.com> |
+| 环境   | URL                                             |
+| ------ | ----------------------------------------------- |
+| `PROD` | <https://chat-plugins-gateway.theforage.cn>     |
+| `DEV`  | <https://chat-plugins-gateway-dev.theforage.cn> |
 
 ### POST 插件网关
 
-> **Note**\
+> \[!NOTE]\
 > **POST** `/api/v1/runner`\
-> 与 LobeChat 插件进行通信的接口。此接口描述了如何使用 LobeChat 插件网关 API 发送请求和获取响应。
+> 与 AiPMChat 插件进行通信的接口。此接口描述了如何使用 AiPMChat 插件网关 API 发送请求和获取响应。
 
 #### Body Request Parameters 请求体参数
 
@@ -168,7 +168,7 @@ LobeChat 插件网关是一个后端服务，为 LobeChat 插件提供网关。�
 
 点击下方按钮来部署您的私有插件网关。
 
-[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flobehub%2Fchat-plugins-gateway&project-name=chat-plugins-gateway&repository-name=chat-plugins-gateway)
+[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Faipmhub%2Fchat-plugins-gateway&project-name=chat-plugins-gateway&repository-name=chat-plugins-gateway)
 
 如果您想进行一些自定义设置，可以在部署时添加环境变量（Environment Variable）：
 
@@ -182,12 +182,12 @@ LobeChat 插件网关是一个后端服务，为 LobeChat 插件提供网关。�
 
 ## 📦 插件生态
 
-插件提供了扩展 LobeChat Function Calling 能力的方法。可以用于引入新的 Function Calling，甚至是新的消息结果渲染方式。如果你对插件开发感兴趣，请在 Wiki 中查阅我们的 [📘 插件开发指引](https://github.com/lobehub/lobe-chat/wiki/Plugin-Development.zh-CN) 。
+插件提供了扩展 AiPMChat Function Calling 能力的方法。可以用于引入新的 Function Calling，甚至是新的消息结果渲染方式。如果你对插件开发感兴趣，请在 Wiki 中查阅我们的 [📘 插件开发指引](https://github.com/aipmhub/aipm-chat/wiki/Plugin-Development.zh-CN) 。
 
-- [lobe-chat-plugins][lobe-chat-plugins]：这是 LobeChat 的插件索引。它从该仓库的 index.json 中获取插件列表并显示给用户。
+- [aipm-chat-plugins][aipm-chat-plugins]：这是 AiPMChat 的插件索引。它从该仓库的 index.json 中获取插件列表并显示给用户。
 - [chat-plugin-template][chat-plugin-template]: Chat Plugin 插件开发模版，你可以通过项目模版快速新建插件项目。
-- [@lobehub/chat-plugin-sdk][chat-plugin-sdk]：LobeChat 插件 SDK 可帮助您创建出色的 Lobe Chat 插件。
-- [@lobehub/chat-plugins-gateway][chat-plugins-gateway]：LobeChat 插件网关是一个后端服务，作为 LobeChat 插件的网关。我们使用 Vercel 部署此服务。主要的 API POST /api/v1/runner 被部署为 Edge Function。
+- [@aipmorg/chat-plugin-sdk][chat-plugin-sdk]：AiPMChat 插件 SDK 可帮助您创建出色的 AiPM Chat 插件。
+- [@aipmorg/chat-plugins-gateway][chat-plugins-gateway]：AiPMChat 插件网关是一个后端服务，作为 AiPMChat 插件的网关。我们使用 Vercel 部署此服务。主要的 API POST /api/v1/runner 被部署为 Edge Function。
 
 <div align="right">
 
@@ -206,7 +206,7 @@ LobeChat 插件网关是一个后端服务，为 LobeChat 插件提供网关。�
 [![][bun-shield]][bun-link]
 
 ```bash
-$ git clone https://github.com/lobehub/chat-plugins-gateway.git
+$ git clone https://github.com/aipmhub/chat-plugins-gateway.git
 $ cd chat-plugins-gateway
 $ bun install
 $ bun dev
@@ -234,8 +234,8 @@ $ bun dev
 
 ## 🔗 Links
 
-- **[🤖 Lobe Chat](https://github.com/lobehub/lobe-chat)** - An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
-- **[🧩 / 🏪 Plugin Index](https://github.com/lobehub/lobe-chat-plugins)** - This is the plugin index for LobeChat. It accesses index.json from this repository to display a list of available plugins for Function Calling to the user.
+- **[🤖 AiPM Chat](https://github.com/aipmhub/aipm-chat)** - An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🧩 / 🏪 Plugin Index](https://github.com/aipmhub/aipm-chat-plugins)** - This is the plugin index for AiPMChat. It accesses index.json from this repository to display a list of available plugins for Function Calling to the user.
 
 <div align="right">
 
@@ -247,42 +247,42 @@ $ bun dev
 
 #### 📝 License
 
-Copyright © 2023 [LobeHub][profile-link]. <br />
+Copyright © 2023 [AiPMHub][profile-link]. <br />
 This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
-[🤯-🧩-lobehub-link]: https://github.com/lobehub/lobe-chat-plugins
-[🤯-🧩-lobehub-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black&style=flat-square
+[🤯-🧩-aipmhub-link]: https://github.com/aipmhub/aipm-chat-plugins
+[🤯-🧩-aipmhub-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20AiPMHub-Plugin-95f3d9?labelColor=black&style=flat-square
+[aipm-chat-plugins]: https://github.com/aipmhub/aipm-chat-plugins
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
 [bun-link]: https://bun.sh
 [bun-shield]: https://img.shields.io/badge/-speedup%20with%20bun-black?logo=bun&style=for-the-badge
-[chat-plugin-sdk]: https://github.com/lobehub/chat-plugin-sdk
-[chat-plugin-template]: https://github.com/lobehub/chat-plugin-
-[chat-plugins-gateway]: https://github.com/lobehub/chat-plugins-gateway
-[github-action-release-link]: https://github.com/lobehub/chat-plugins-gateway/actions/workflows/release.yml
-[github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/chat-plugins-gateway/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
-[github-action-test-link]: https://github.com/lobehub/chat-plugins-gateway/actions/workflows/test.yml
-[github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/chat-plugins-gateway/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
-[github-codespace-link]: https://codespaces.new/lobehub/chat-plugins-gateway
+[chat-plugin-sdk]: https://github.com/aipmhub/chat-plugin-sdk
+[chat-plugin-template]: https://github.com/aipmhub/chat-plugin-
+[chat-plugins-gateway]: https://github.com/aipmhub/chat-plugins-gateway
+[github-action-release-link]: https://github.com/aipmhub/chat-plugins-gateway/actions/workflows/release.yml
+[github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/aipmhub/chat-plugins-gateway/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-action-test-link]: https://github.com/aipmhub/chat-plugins-gateway/actions/workflows/test.yml
+[github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/aipmhub/chat-plugins-gateway/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-codespace-link]: https://codespaces.new/aipmhub/chat-plugins-gateway
 [github-codespace-shield]: https://github.com/codespaces/badge.svg
-[github-contrib-link]: https://github.com/lobehub/chat-plugins-gateway/graphs/contributors
-[github-contrib-shield]: https://contrib.rocks/image?repo=lobehub%2Fchat-plugins-gateway
-[github-contributors-link]: https://github.com/lobehub/chat-plugins-gateway/graphs/contributors
-[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/chat-plugins-gateway?color=c4f042&labelColor=black&style=flat-square
-[github-forks-link]: https://github.com/lobehub/chat-plugins-gateway/network/members
-[github-forks-shield]: https://img.shields.io/github/forks/lobehub/chat-plugins-gateway?color=8ae8ff&labelColor=black&style=flat-square
-[github-issues-link]: https://github.com/lobehub/chat-plugins-gateway/issues
-[github-issues-shield]: https://img.shields.io/github/issues/lobehub/chat-plugins-gateway?color=ff80eb&labelColor=black&style=flat-square
-[github-license-link]: https://github.com/lobehub/chat-plugins-gateway/blob/main/LICENSE
-[github-license-shield]: https://img.shields.io/github/license/lobehub/chat-plugins-gateway?color=white&labelColor=black&style=flat-square
-[github-releasedate-link]: https://github.com/lobehub/chat-plugins-gateway/releases
-[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/chat-plugins-gateway?labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/lobehub/chat-plugins-gateway/network/stargazers
-[github-stars-shield]: https://img.shields.io/github/stars/lobehub/chat-plugins-gateway?color=ffcb47&labelColor=black&style=flat-square
-[lobe-chat-plugins]: https://github.com/lobehub/lobe-chat-plugins
-[npm-release-link]: https://www.npmjs.com/package/@lobehub/chat-plugins-gateway
-[npm-release-shield]: https://img.shields.io/npm/v/@lobehub/chat-plugins-gateway?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[pr-welcome-link]: https://github.com/lobehub/chat-plugins-gateway/pulls
+[github-contrib-link]: https://github.com/aipmhub/chat-plugins-gateway/graphs/contributors
+[github-contrib-shield]: https://contrib.rocks/image?repo=aipmhub%2Fchat-plugins-gateway
+[github-contributors-link]: https://github.com/aipmhub/chat-plugins-gateway/graphs/contributors
+[github-contributors-shield]: https://img.shields.io/github/contributors/aipmhub/chat-plugins-gateway?color=c4f042&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/aipmhub/chat-plugins-gateway/network/members
+[github-forks-shield]: https://img.shields.io/github/forks/aipmhub/chat-plugins-gateway?color=8ae8ff&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/aipmhub/chat-plugins-gateway/issues
+[github-issues-shield]: https://img.shields.io/github/issues/aipmhub/chat-plugins-gateway?color=ff80eb&labelColor=black&style=flat-square
+[github-license-link]: https://github.com/aipmhub/chat-plugins-gateway/blob/main/LICENSE
+[github-license-shield]: https://img.shields.io/github/license/aipmhub/chat-plugins-gateway?color=white&labelColor=black&style=flat-square
+[github-releasedate-link]: https://github.com/aipmhub/chat-plugins-gateway/releases
+[github-releasedate-shield]: https://img.shields.io/github/release-date/aipmhub/chat-plugins-gateway?labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/aipmhub/chat-plugins-gateway/network/stargazers
+[github-stars-shield]: https://img.shields.io/github/stars/aipmhub/chat-plugins-gateway?color=ffcb47&labelColor=black&style=flat-square
+[npm-release-link]: https://www.npmjs.com/package/@aipmorg/chat-plugins-gateway
+[npm-release-shield]: https://img.shields.io/npm/v/@aipmorg/chat-plugins-gateway?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
+[pr-welcome-link]: https://github.com/aipmhub/chat-plugins-gateway/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
-[profile-link]: https://github.com/lobehub
+[profile-link]: https://github.com/aipmhub
